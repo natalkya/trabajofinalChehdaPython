@@ -1,1 +1,2 @@
-https://www.youtube.com/watch?v=n3AHQze6pzE
+En este enlace se encuentra el video de presentación del proyecto: https://www.youtube.com/watch?v=n3AHQze6pzE
+Se adjuntaron imagenes de 3 casos CRUD (create, read, update y delete) que realiza el proyecto.
