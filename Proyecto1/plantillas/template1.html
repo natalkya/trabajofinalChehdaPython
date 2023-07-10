@@ -1,0 +1,39 @@
+<div>
+    {% extends "AppCoder/inicio.html" %}
+    {% load static %}
+    
+    {% block contenidoQueCambia %}
+        <h2> ֍ Bienvenidos a nuestro blog ֍ </h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <ul class="navbar-nav mx-auto">
+                    {% if user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'crear_blog' %}">Crear entrada</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'editar_entradas' %}">Editar Entradas</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>        
+        <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for elemento in blog %}
+                <div class="col">
+                    <article class="card h-100 articulo">
+                        <div class="card-body">
+                            <h3>{{ elemento.title }}</h3>
+                            <p class="resumenArticulo">
+                                {{ elemento.content|truncatechars:200 | safe }}
+                            </p>
+                            <a href="{% url 'detalle_pagina' elemento.pk %}" class="btn btn-primary">Ver más</a>
+                            <img class="imagenArticulo" src="{{ elemento.image }}" alt="">
+                            <p>Autor: {{ elemento.autor }}</p>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock contenidoQueCambia %}
+</div>

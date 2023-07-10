@@ -1,0 +1,16 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h2>Editar Entrada</h2>
+    <form class="formeditar" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+{% endblock contenidoQueCambia %}

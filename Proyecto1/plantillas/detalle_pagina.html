@@ -1,0 +1,13 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <article class="detalleArticle">
+        <h2>{{ pagina.title }}</h2>
+        <h3>{{ pagina.subtitle }}</h3>
+        <p class="parrafoArticulo">{{ pagina.content | safe }}</p>
+        <img src="{{ pagina.image }}" alt="">
+        <p>Autor: {{ pagina.autor }}</p>
+        <p>Fecha de publicación: {{ pagina.posted }}</p>
+    </article>
+{% endblock contenidoQueCambia %}

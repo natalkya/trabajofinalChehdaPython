@@ -1,0 +1,15 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h2>Editar Entradas</h2>
+    <ul>
+        {% for entrada in entradas %}
+            <li>
+                <a href="{% url 'editar_entrada' entrada.pk %}">{{ entrada.title }}</a>
+            </li>
+        {% empty %}
+            <li>No hay entradas existentes</li>
+        {% endfor %}
+    </ul>
+{% endblock contenidoQueCambia %}
