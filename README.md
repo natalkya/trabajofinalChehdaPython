@@ -1,4 +1,4 @@
-﻿# Proyecto "Vidas sobre ruedas"
+﻿# Proyecto "Vidas sobre ruedas" - Natalia Chehda
 
 Este es un proyecto web llamado "Vidas sobre ruedas" que tiene como objetivo compartir historias inspiradoras de personas que viven con discapacidad y utilizan sillas de ruedas. El proyecto consta de dos aplicaciones: una aplicación de blog y otra aplicación relacionada con meetups y eventos.
 
