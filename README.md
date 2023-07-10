@@ -28,7 +28,7 @@ El proyecto cuenta con las siguientes funcionalidades principales:
 - Publicación de blogs y historias de vida: Los usuarios autenticados pueden crear y publicar sus propios blogs y compartir sus historias de vida en sillas de ruedas.
 - Visualización de blogs y historias de vida: Los visitantes del sitio web pueden leer los blogs y las historias de vida publicadas por los usuarios.
 - Gestión de meetups y eventos: Los usuarios autenticados pueden crear, editar y eliminar meetups y eventos relacionados con la comunidad de personas en sillas de ruedas.
-- Búsqueda de contenido: Los usuarios pueden buscar blogs, historias de vida, meetups y eventos utilizando un campo de búsqueda.
+- Búsqueda de contenido: Los usuarios pueden buscar meetups y eventos utilizando un campo de búsqueda.
 
 ## Configuración del entorno de desarrollo
 
