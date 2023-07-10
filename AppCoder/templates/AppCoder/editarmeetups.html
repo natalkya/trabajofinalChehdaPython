@@ -1,0 +1,16 @@
+<div>
+    {% extends "AppCoder/inicio.html" %}
+    {% load static %}
+    {% block contenidoQueCambia %}
+        {% if user.is_superuser %}
+            <form  action="" method="post"> {% csrf_token %}
+                <table class="formEditMeetup">
+                    {{ miFormulario2.as_table }}
+                </table>
+                <input class="btn btn-primary" type="submit" value="Enviar">
+            </form>
+        {% else %}
+            <p>Acceso restringido. Solo el administrador puede editar meetups.</p>
+        {% endif %}
+    {% endblock %}
+</div>

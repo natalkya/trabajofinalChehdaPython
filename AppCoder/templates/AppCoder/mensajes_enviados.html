@@ -1,0 +1,10 @@
+<h1>Mensajes enviados</h1>
+{% for mensaje in mensajes %}
+  <div>
+    <p>Para: {{ mensaje.receptor }}</p>
+    <p>Contenido: {{ mensaje.contenido }}</p>
+    <p>Fecha de envío: {{ mensaje.fecha_envio }}</p>
+  </div>
+{% empty %}
+  <p>No hay mensajes enviados.</p>
+{% endfor %}

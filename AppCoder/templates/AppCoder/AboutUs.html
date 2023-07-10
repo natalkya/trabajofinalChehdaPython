@@ -1,0 +1,29 @@
+<!-- about_us.html -->
+
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+  {% block AboutUs %}
+    <div class="container">
+      <h1 class="my-4">Acerca de Vidas sobre Ruedas</h1>
+      <p>Bienvenido a Vidas sobre Ruedas, una plataforma dedicada a compartir historias y propiciar encuentros entre personas en silla de ruedas.</p>
+
+      <h2>Nuestra Misión</h2>
+      <p>En Vidas sobre Ruedas, nos esforzamos por brindar información, inspiración y conexiones significativas que cultiven la amistad y el apoyo mutuo.</p>
+
+      <h2>Lo que Ofrecemos</h2>
+      <ul>
+        <li><strong>Blog:</strong> Explora las inspiradoras historias de personas que quieren darse a conocer, compartir logros y fracasos, dar un punto de vista distinto de la vida y reflexionar en profundidad.</li>
+        <li><strong>Meet Ups:</strong> Únete a eventos locales donde podrás conocer a otras personas en silla de ruedas, compartir experiencias y establecer nuevas amistades.</li>
+      </ul>
+
+      <h2>Únete a Nuestra Comunidad</h2>
+      <p>Si estás interesado en formar parte de nuestra comunidad de Vidas sobre Ruedas, regístrate hoy mismo y comienza a explorar, compartir y conectar con otras personas.</p>
+
+      <p><a href="{% url 'registro' %}" class="btn btn-primary">Regístrate</a> <a href="{% url 'login' %}" class="btn btn-secondary">Iniciar Sesión</a></p>
+    </div>
+  {% endblock AboutUs %}
+
+{% endblock contenidoQueCambia %}

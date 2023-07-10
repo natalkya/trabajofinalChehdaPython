@@ -1,0 +1,38 @@
+<div>
+    {% extends "AppCoder/inicio.html" %}
+    {% load static %}
+    
+        {% block contenidoQueCambia %}
+            <p>Meetups</p>
+            <table class="tableInfoMeetUp">
+                <tr class="tituloTablaMeetUps">
+                    <th>Titulo</th>
+                    <th>Contenido</th>
+                    <th>Fecha</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+                </tr>
+                
+                    {% for meetup in meetups %}
+                    <tr>
+                    <td>{{meetup.titulo}}</td>
+                    <td>{{meetup.contenido}}</td>
+                    <td>{{meetup.fecha_publicacion}}</td>
+                    <td><button class="btn btn-danger btnEliminar"><a href="{% url 'eliminarmeetups' meetup.titulo %}">X</a></button></td>
+                    <td><button class="btn btn-warning btnEditar"><a href="{% url 'editarmeetups' meetup.titulo %}">Editar</a></button></td>
+                    </tr>
+                    {%endfor%}
+                </tr>
+            </table>
+            <div class="formSetMeetups">
+                {% block setmeetups %}
+                {% endblock %}
+            </div>          
+            <div class="formGetMeetups">
+                {% block getmeetups %}
+                {% endblock %}
+            </div>
+            <a href="{% url 'setmeetups' %}"><button class="btn btn-outline-primary">Crear Post</button></a>
+            <a href="{% url 'getmeetups' %}"><button class="btn btn-outline-secondary">Buscar Post</button></a> 
+        {% endblock %}
+</div>

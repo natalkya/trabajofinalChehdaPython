@@ -1,0 +1,12 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+
+    {% block contenidoQueCambia %}
+
+<h1>Enviar Mensaje</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Enviar</button>
+</form>
+{% endblock %}
